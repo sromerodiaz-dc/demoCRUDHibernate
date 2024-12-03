@@ -58,6 +58,8 @@ public class CRUD {
             String nombre = rs.getString("nombre"); // Obtiene el valor de la columna "nombre"
             String apellido = rs.getString("apellido"); // Obtiene el valor de la columna "apellido"
             int salario = rs.getInt("salario"); // Obtiene el valor de la columna "salario"
+
+            System.out.println("[" + id + "] => " + nombre + " " + apellido + " - " + salario + "€");
         }
 
         stmt.close(); // Cierra el Statement para liberar recursos

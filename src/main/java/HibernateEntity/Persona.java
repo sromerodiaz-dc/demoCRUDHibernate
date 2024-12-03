@@ -1,4 +1,4 @@
-package CRUDHibernate.entity;
+package HibernateEntity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -10,6 +10,7 @@ import java.math.BigDecimal;
 @Entity
 @Table(name = "personas")
 public class Persona {
+
     @Id
     @Column(name = "id", nullable = false, precision = 10)
     private BigDecimal id;
@@ -23,6 +24,20 @@ public class Persona {
     @Column(name = "salario", precision = 10)
     private BigDecimal salario;
 
+    // Constructor sin parámetros (requerido por Hibernate)
+    public Persona() {
+        // Hibernate necesita este constructor sin parámetros para instanciar la clase
+    }
+
+    // Constructor parametrizado
+    public Persona(BigDecimal id, String nombre, String apellido, BigDecimal salario) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.salario = salario;
+    }
+
+    // Getters y setters
     public BigDecimal getId() {
         return id;
     }
@@ -54,5 +69,4 @@ public class Persona {
     public void setSalario(BigDecimal salario) {
         this.salario = salario;
     }
-
 }

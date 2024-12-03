@@ -41,6 +41,7 @@ public class Persona {
 }
 ````
 3. Poner la configuración de Hibernate en el persistance.xml
+
 `````xml
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="https://jakarta.ee/xml/ns/persistence"
@@ -58,7 +59,7 @@ public class Persona {
 
         <!-- Data Source configuration -->
         <!-- Classes to be managed by JPA -->
-        <class>CRUDHibernate.entity.Persona</class>
+        <class>HibernateEntity.PersonaHibernateEntity.Persona</class>
 
         <!-- Optional, exclude unlisted classes -->
         <exclude-unlisted-classes>false</exclude-unlisted-classes>

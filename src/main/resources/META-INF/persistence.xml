@@ -14,7 +14,7 @@
 
         <!-- Data Source configuration -->
         <!-- Classes to be managed by JPA -->
-        <class>CRUDHibernate.entity.Persona</class>
+        <class>HibernateEntity.Persona</class>
 
         <!-- Optional, exclude unlisted classes -->
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
@@ -23,6 +23,7 @@
         <properties>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
             <property name="show_sql" value="true"/>
+
             <!-- Provide your database URL, username, and password -->
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/scheme"/>
             <property name="hibernate.connection.username" value="root"/>
